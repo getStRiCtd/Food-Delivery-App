@@ -1,41 +1,17 @@
 import 'package:flutter/material.dart';
 
 class BotNavIcon {
-  final IconData icon;
-  final double size = 34;
+  final Icon icon;
+  final String label;
 
-  const BotNavIcon({required this.icon});
+  const BotNavIcon({required this.icon, required this.label}) : super();
 }
 
 List<BotNavIcon> iconsRow = [
-  BotNavIcon(icon: Icons.home),
-  BotNavIcon(icon: Icons.monetization_on),
-  BotNavIcon(icon: Icons.monetization_on),
-  BotNavIcon(icon: Icons.gps_not_fixed_sharp),
-  BotNavIcon(icon: Icons.more_horiz),
+  BotNavIcon(icon: Icon(Icons.home), label: 'Начало'),
+  BotNavIcon(icon: Icon(Icons.monetization_on), label: 'Заказ'),
+  BotNavIcon(icon: Icon(Icons.gps_not_fixed_sharp), label: "Карта"),
+  BotNavIcon(icon: Icon(Icons.more_horiz), label: "Ещё"),
 ];
 
-class BotNavigation extends StatefulWidget {
-  const BotNavigation({Key? key}) : super(key: key);
 
-  @override
-  BotNavigationState createState() => BotNavigationState();
-}
-
-class BotNavigationState extends State<BotNavigation> {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 50,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: iconsRow
-            .map((iconData) => Icon(
-                  iconData.icon,
-                  size: iconData.size,
-                ))
-            .toList(),
-      ),
-    );
-  }
-}

@@ -27,19 +27,19 @@ class SettingsRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Padding(
-          padding: EdgeInsets.only(left: 20, right: 15),
-          child: Text(label,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500)),
+    return MaterialButton(
+      onPressed: () {},
+      child: SizedBox(
+        height: 50,
+        child: Row(
+          children: [
+            Text(label,
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500)),
+            Spacer(),
+            Icon(Icons.navigate_next, size: 30)
+          ],
         ),
-        Spacer(),
-        Padding(
-          padding: EdgeInsets.only(right: 15),
-          child: Icon(Icons.navigate_next, size: 30),
-        )
-      ],
+      ),
     );
   }
 }
