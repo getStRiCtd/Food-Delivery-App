@@ -10,12 +10,13 @@ class Menu extends StatelessWidget {
       color: Colors.white,
       width: double.infinity,
       child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: const [
-            SettingsRow(label: 'Любимые рестораны'),
-            SettingsRow(label: "Способы оплаты"),
-            SettingsRow(label: 'История заказов')
-          ]),
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: const [
+          SettingsRow(label: 'Любимые рестораны'),
+          SettingsRow(label: "Способы оплаты"),
+          SettingsRow(label: 'История заказов')
+        ],
+      ),
     );
   }
 }
